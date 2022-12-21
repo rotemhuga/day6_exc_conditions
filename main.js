@@ -129,42 +129,126 @@ function NumberPrint (number) {
 }
 NumberPrint (-7)
 
-//10-A
-function calculator1 (num1, num2 ,operand) {
-    if (operand ="+") {
+//10 
+ function calculator4 (num1, num2 ,operand) {
+    if (operand ==="+") {
     return num1 + num2;
-    }
-}
- console.log(calculator1(num1=2, num2=3, operand="+")) 
-
-//10-B
- function calculator2 (num1, num2 ,operand) {
-    if (operand ="-") {
+    } else if (operand ==="-") {
     return num1 - num2;
-    }
-}
- console.log(calculator2(num1=2, num2=3, operand="-")) 
- 
-//10-C
- function calculator3 (num1, num2 ,operand) {
-    if (operand ="/") {
+    } else if (operand ==="+") {
     return num1 / num2;
-    }
-}
- console.log(calculator3(num1=2, num2=3, operand="/")) 
- 
- //10-D
- function calculator4 (num1, num2 ,operand) {
-    if (operand ="/") {
+    } else if (num2 !==0 && operand ==="/") {
     return num1 / num2;
-    }
+    } else if (num2===0 && operand ==="/") {
+    return "cannot divide by zero";
+    } else if (operand ==="^") {
+    return "invalid opreator";
+    } else if (operand ==="%") {
+    return num1 % num2;
+    } else if (operand ==="*") {
+    return num1 *num2;
 }
- console.log(calculator4(num1=2, num2=0, operand="/")) 
- 
- //10-E
- function calculator4 (num1, num2 ,operand) {
-    if (operand ="^") {
-    return num1 ^ num2;
+ }
+ console.log(calculator4(8, 0, "/"));
+
+ //11
+ function isLeapYear (year) {
+    if (year%4 ===0 && year%400===0 && year % 100 ===0) {
+    return (true);
     }
+    return (false);
+  }
+
+ console.log(isLeapYear (700))
+
+ //13
+ function conditional (x, y, z){
+    if (x > y && x > z) {
+        if (y > z) {
+        alert(`${x}, ${y}, ${z}`);
+        } else {
+            alert(`${x}, ${z}, ${y}`);
+        }
+    } 
+
+    if (y > x && y > z) {
+         if (x > z) {
+        alert (`${y}, ${x}, ${z}`);    
+         } else {
+            alert (`${y}, ${z}, ${x}`);
+        }
+    }
+    
+    if (z > y && z > x) {
+         if (y > x) {
+        alert (`${z}, ${y}, ${x}`);    
+         } else {
+            alert (`${z}, ${x}, ${y}`);
+        }
+    }    
+    }
+    // console.log(conditional(6, 8, 9))
+
+    //14
+  
+    //A
+    function computerStatusCode (spaceSuitsOn, shuttleCabinReady){
+        if (spaceSuitsOn && shuttleCabinReady) {
+        console.log("Crew Ready")
+        } else {
+            console.log("Crew Not Ready")
+        }
+    }
+
+    //B
+    function computerStatusCode (value){
+        if (value === 200) {
+        console.log("Please stand by. Computer is rebooting.")
+        } else if (value === 400) {
+           console.log("Success! Computer online.")
+        } else
+        alert("Computer offline!")
+    }
+
+    // computerStatusCode (500)
+
+    //C
+    function shuttleSpeed (value){
+        if (value > 17500) {
+        alert("Escape velocity reached!")
+        } else if (value < 8000) {
+            alert("Cannot maintain orbit!")
+        } else
+        console.log("Stable speed")
+    }
+
+    // shuttleSpeed (10000)
+
+    //15 
+    function ColorPrint (color){
+   switch (color){
+    case "red":
+        console.log ("Red is the color of danger")
+    break;   
+    case "orange":
+        console.log ("Orange is the color of caution")
+    break;   
+    case "yellow":
+        console.log ("Yellow is the color of sunshine")
+    break;   
+    case "green": 
+        console.log ("Green is the color of nature")
+    break;   
+    case "Blue":
+        console.log ("Blue is the color of the sky")
+    break;   
+    case "purple":
+        console.log ("purple is the color of royalty")
+    break;   
+    default:
+        console.log ("invalid color")
+    break;
+   }
 }
- console.log(calculator4(num1=2, num2=3, operand="^")) 
+// ColorPrint ("Blue")
+
